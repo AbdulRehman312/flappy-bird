@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Poctures/bg\ 2.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.game-container .instrucions {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    /* visibility: hidden; */
+}
+
+.game-container .instrucions p {
+    font-size: 25px;
+    font-weight: bold;
+    color: darkcyan;
+    mix-blend-mode: difference;
+}
+
+.button-cont {
+    margin-top: 25px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    background-color: darkblue;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 25px;
+
+}
+
+.game-over {
+
+    text-align: center;
+    visibility: hidden;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.score {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-right: 15px;
+    visibility: hidden;
+}
+
+.again {
+    visibility: hidden;
+    margin-left: 300px;
+}
+
+.player {
+
+    background-image: url(Poctures/sparrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 200px;
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+
+
+}
+
+.opposite {
+
+    background-image: url(Poctures/cat\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 200px;
+    left: 70%;
+    bottom: 100px;
+    position: absolute;
+   
+}
+
+.speed {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.stats {
+    position: relative;
+    top: 30px;
+}
+
+.jump {
+    animation: jumpPlayer .8s linear;
+   
+}
+
+.oppositeMove {
+    animation: moveOpposite 6s linear infinite;
+   
+}
+
+
+
+
+@keyframes moveOpposite  {
+    0%{
+        left: 1000px;
+
+    }
+
+    100% {
+        left: -2100px;
+    }
+    
+}
+
+
+
+
+
+
+
+@keyframes jumpPlayer {
+
+    0% {
+        bottom: 100px;
+
+    }
+
+    10% {
+
+        background-image: url(Poctures/cat\ 2.png);
+
+    }
+
+
+    20% {
+        background-image: url(Poctures/cat\ 2.png);
+    }
+
+    30% {
+
+        background-image: url(Poctures/cat\ 2.png);
+
+    }
+
+    50%{
+        bottom: 500px;
+        background-image: url(Poctures/cat\ 2.png);
+    }
+
+    100% {
+
+        bottom: 100px;
+   
+        background-image: url(Poctures/sparrow.png);
+
+    }
+
+}
+
+
+@media (min-width:2200px) {
+
+    
+@keyframes moveOpposite  {
+    0%{
+        left: 4000px;
+
+    }
+
+    100% {
+        left: -8000px;
+    }
+    
+}
+
+    
+}

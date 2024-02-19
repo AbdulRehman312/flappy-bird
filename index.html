@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>I Dragon Game</title>
+</head>
+
+<body>
+
+    <div class="game-container">
+        <div class="instrucions">
+            <p>Left Aroow Key : For backward movement</p>
+            <p>down arrow Key : for forwarsd movement </p>
+            <p>top Arrow Key : for Jumping</p>
+
+
+            <div class="button-cont">
+                <button onclick="mainLogics()">Start Game</button>
+                <button class="again" onclick="playAgainGame()">Play again</button>
+
+            </div>
+
+
+        </div>
+
+        <div class="stats">
+            <div class="game-over">Game Over</div>
+            <div class="score">Your Score : 00</div>
+            <div class="speed">Speed Duration : 00sec</div>
+         
+        </div>
+        <div class="player"></div>
+        <div class="opposite "></div>
+
+
+    </div>
+
+    <audio src="Poctures/PlaygameSound.mp3" id="plauSound"></audio>
+    <audio src="Poctures/mixkit-boxer-getting-hit-2055.wav" id="gameOverSound"></audio>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
